@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Image:</strong>
+  <% if @feed.image && @feed.image.url %>
+  <%= image_tag @feed.image.url , height: "250px" %>
+  <% end %>
+</p>
+<%= link_to 'Edit', edit_feed_path(@feed) %> 
+<%= link_to 'Back', feeds_path %>
